@@ -23,10 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
 	{
+        // \Carbon\Carbon::setLocale("zh");
+        // \App\Models\Topic::observe(\App\Observers\TopicObserver::class);
 		\App\Models\User::observe(\App\Observers\UserObserver::class);
 		\App\Models\Topic::observe(\App\Observers\TopicObserver::class);
         \Illuminate\Pagination\Paginator::useBootstrap();
-
-        //
     }
 }
